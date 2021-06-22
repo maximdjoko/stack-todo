@@ -5,9 +5,81 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #e6e6e6;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.stackTodos {
+  width: 100%;
+  margin: 0px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.stackTodos > div {
+  width: 50%;
+}
+.addItems {
+  position: sticky;
+}
+
+.addItems input {
+  position: relative;
+  padding: 5px;
+  margin: 5px;
+  width: 50%;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #858585;
+}
+
+.todos tr:nth-child(even) {
+  background: #fff;
+}
+
+.head {
+  text-align: center;
+}
+
+.completed {
+  background-color: #39ff7b;
+}
+
+.hide {
+  display: none;
+}
+table th,
+table td {
+  border-right: 2px solid #fff;
+  padding: 5px;
+  margin: 0;
+}
+
+table th:last-child {
+  border: none;
+  /* width: 100px; */
+}
+
+button {
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  width: 80px;
+  outline: none;
+  border: 2px solid #dfdddd;
+  text-transform: capitalize;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.add {
+  background: #39ff7b;
+}
+.delete {
+  background: #f84444;
+  color: #fff;
 }
