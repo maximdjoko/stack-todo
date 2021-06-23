@@ -1,21 +1,11 @@
 import React, { Component } from 'react';
+import { FaTrashAlt } from 'react-icons/fa';
 
 export default class TaskItem extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      count: 0,
-    };
-  }
-
   toggleTask = () => {
     this.props.toggleTask(this.props.id);
   };
-  handleCount = () => {
-    this.setState({ count: this.state.count + 1 });
-    this.handleCount = this.handleCount.bind(this);
-  };
+
   deleteTask = () => {
     this.props.deleteTask(this.props.id);
   };
@@ -49,9 +39,9 @@ export default class TaskItem extends Component {
             readOnly
             checked={this.props.taskItem.isCompleted}
           />
-          <button onClick={this.deleteTask} className="delete">
-            Delete
-          </button>
+          <span onClick={this.deleteTask} className="delete">
+            <FaTrashAlt color="red" />
+          </span>
         </td>
       </tr>
     );

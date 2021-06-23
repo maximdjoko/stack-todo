@@ -43,7 +43,9 @@ export default class Main extends Component {
   render() {
     return (
       <div className="main">
-        <h1 className="head">Stack Todos</h1>
+        <h1 className="head">
+          <span>Stack</span>D
+        </h1>
         <div className="stackTodos">
           <div className="addItems">
             <h1>Add Todos</h1>

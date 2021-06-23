@@ -23,16 +23,13 @@ export default class CreateTask extends Component {
     event.preventDefault();
     this.props.createTask(this.state.task, this.state.description);
     this.setState({ task: '', description: '' });
-    // this.setState({ description: '' });
-  };
-
-  handleCount = () => {
     this.setState({ count: this.state.count + 1 });
+    // this.setState({ description: '' });
   };
 
   render() {
     return (
-      <div className="addItems">
+      <div className="">
         <form onSubmit={this.handleSubmit}>
           <input
             type="text"
@@ -50,8 +47,12 @@ export default class CreateTask extends Component {
             autoFocus
           />
           <br />
-          <button type="submit" className="add">
-            add
+          <button
+            type="submit"
+            className="add"
+            onClick={() => this.setState({ count: this.state.count + 1 })}
+          >
+            add todo
           </button>
         </form>
       </div>

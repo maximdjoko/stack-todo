@@ -5,36 +5,67 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #e6e6e6;
+  background: #fdf8f8;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.main {
+  padding: 10px;
+  margin: 10px;
+}
+h1.head {
+  background: #fff;
+  border: none;
+}
+.head span {
+  background: black;
+  color: #fff;
+}
 
 .stackTodos {
-  width: 100%;
-  margin: 0px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  padding: 10px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
 }
-.stackTodos > div {
-  width: 50%;
+
+@media screen and (max-width: 732px) {
+  .stackTodos {
+    display: block;
+  }
 }
-.addItems {
-  position: sticky;
+
+.addItems,
+h1 {
+  border: 1px solid #dddddd;
+}
+
+.addItems h1 {
+  border: 1px solid dddddd;
+}
+.not-completed {
+  background-color: #ff3838;
+  color: #fff;
 }
 
 .addItems input {
   position: relative;
   padding: 5px;
   margin: 5px;
-  width: 50%;
-  border-radius: 5px;
+  width: 94%;
   outline: none;
-  border: 1px solid #858585;
+  border: 2px solid black;
+}
+
+.todos {
+  border: 2px solid #ddd;
+}
+.todos tr {
+  margin: 0 auto;
 }
 
 .todos tr:nth-child(even) {
@@ -43,15 +74,25 @@ code {
 
 .head {
   text-align: center;
+  background: none;
 }
 
 .completed {
   background-color: #39ff7b;
+  color: #fff;
 }
 
 .hide {
   display: none;
 }
+table {
+  /* border: 2px solid brown; */
+  width: 100%;
+}
+table tr {
+  background-color: #fff;
+}
+
 table th,
 table td {
   border-right: 2px solid #fff;
@@ -74,12 +115,18 @@ button {
   text-transform: capitalize;
   font-weight: 700;
   cursor: pointer;
-  border-radius: 5px;
 }
 .add {
-  background: #39ff7b;
+  background: #080808;
+  color: #fff;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  width: 100px;
 }
 .delete {
-  background: #f84444;
-  color: #fff;
+  cursor: pointer;
+  padding: 0 5px;
 }
