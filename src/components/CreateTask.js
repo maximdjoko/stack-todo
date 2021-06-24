@@ -7,6 +7,7 @@ export default class CreateTask extends Component {
     this.state = {
       count: 0,
       task: '',
+      empty: false,
       description: '',
       isCompleted: false,
     };

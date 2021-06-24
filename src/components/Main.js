@@ -11,17 +11,18 @@ export default class Main extends Component {
 
     this.state = {
       tasks: tasks,
+      isError: false,
     };
   }
 
   createTask = (task, description) => {
     if (task.trim() === '') {
-      alert("Task can't be empty");
+      this.setState({ isError: true });
       return;
+    } else {
+      this.setState({ isError: false });
     }
     if (description.trim() === '') {
-      alert("description can't be empty");
-      return;
     }
     tasks.unshift({ task, description });
     this.setState({ tasks: tasks });
@@ -43,6 +44,9 @@ export default class Main extends Component {
   render() {
     return (
       <div className="main">
+        <div className={this.state.isError ? 'error' : 'hide'}>
+          At list a todo title is required
+        </div>
         <h1 className="head">
           <span>Stack</span>D
         </h1>
