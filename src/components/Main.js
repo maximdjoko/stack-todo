@@ -44,12 +44,12 @@ export default class Main extends Component {
   render() {
     return (
       <div className="main">
-        <div className={this.state.isError ? 'error' : 'hide'}>
-          At list a todo title is required
-        </div>
         <h1 className="head">
           <span>Stack</span>D
         </h1>
+        <div className={this.state.isError ? 'error' : 'hide'}>
+          At list a todo title is required
+        </div>
         <div className="stackTodos">
           <div className="addItems">
             <h1>Add Todos</h1>
